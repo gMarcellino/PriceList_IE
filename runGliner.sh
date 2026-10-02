@@ -1,0 +1,14 @@
+set -euo pipefail
+
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/universal_ner_ita_zero_shot.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/universal_ner_ita_train.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/universal_ner_ita_finetuned_inference.yaml
+
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/SauerkrautLM_zero_shot.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/SauerkrautLM_train.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/SauerkrautLM_finetuned_inference.yaml
+
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/glinerMulti_zero_shot.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/glinerMulti_train.yaml
+python src/entityRecognizer/GLiNEREntityRecognizer.py --config scripts/configs/EntityRecognizer/GLiNEREntityRecognizer/glinerMulti_finetuned_inference.yaml
+

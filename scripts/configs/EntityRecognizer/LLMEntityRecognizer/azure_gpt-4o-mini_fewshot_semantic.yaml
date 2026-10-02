@@ -1,0 +1,25 @@
+provider: "azure"
+model: "gpt-4o-mini"
+api_key: "<YOUR_API_KEY>"
+azure_endpoint: "<YOUR_AZURE_ENDPOINT>"
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/LLMEntityRecognizer/raw"
+language: "IT"
+#checkpoint_path: "checkpoints/LLMEntityRecognizer/azure_gpt-4o-mini-fewshot-semantic.jsonl"
+prompts_path: "src/entityRecognizer/prompts_IT.json"
+system_prompt_key: "base"
+user_prompt_key: "base"
+temperature: 0.2
+max_new_tokens: 2048
+
+few_shot:
+  k: 4
+  strategy: "semantic"
+  examples_path: "data/training.json"
+  text_field: "text"
+  #embedding_model: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+  embedding_model: "nickprock/sentence-bert-base-italian-uncased"
+  embeddings_cache_path: "cache/LLMEntityRecognizer/training_semantic_embeddings"
+  embedding_device: null
+  exclude_same_text: true

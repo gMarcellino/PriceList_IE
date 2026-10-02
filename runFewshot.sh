@@ -1,0 +1,12 @@
+set -euo pipefail
+
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-4b_fewshot_fixed.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-4b_fewshot_semantic.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-12b_fewshot_fixed.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-12b_fewshot_semantic.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-27b_fewshot_fixed.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/ollama_gemma-27b_fewshot_semantic.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/azure_gpt-4o-mini_fewshot_fixed.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/azure_gpt-4o-mini_fewshot_semantic.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/azure_gpt-4o_fewshot_fixed.yaml
+python3 run_llm_entity_recognizer.py --config scripts/configs/EntityRecognizer/LLMEntityRecognizer/azure_gpt-4o_fewshot_semantic.yaml

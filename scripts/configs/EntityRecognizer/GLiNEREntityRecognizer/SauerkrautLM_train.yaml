@@ -1,0 +1,25 @@
+inference_only: false
+
+train_data_paths:
+  - "data/training.json"
+dev_data_path: "data/dev.json"
+
+model_name: "VAGOsolutions/SauerkrautLM-GLiNER"
+output_dir: "checkpoints/GLiNEREntityRecognizer/SauerkrautLM_edil"
+save_directory: "checkpoints/GLiNEREntityRecognizer/SauerkrautLM_edil/checkpoints"
+
+threshold: 0.5
+num_steps: 3000
+eval_every: 200
+batch_size: 8
+max_len: 512
+warmup_ratio: 0.1
+lr_encoder: 0.00001
+lr_others: 0.00005
+freeze_token_rep: false
+max_types: 15
+no_shuffle_types: false
+no_random_drop: false
+max_len: 1024
+max_neg_type_ratio: 1.0
+seed: 42

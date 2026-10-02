@@ -1,0 +1,14 @@
+inference_only: true
+
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/GLiNEREntityRecognizer/glinerMulti_zero_shot"
+#eval_data_path: "data/test.json"
+
+model_name: "urchade/gliner_multi-v2.1"
+model_path: null
+
+threshold: 0.5
+batch_size: 8
+max_len: 512
+seed: 42

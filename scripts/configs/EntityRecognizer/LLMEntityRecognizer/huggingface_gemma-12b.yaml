@@ -1,0 +1,22 @@
+provider: "huggingface"
+model: "google/gemma-3-12b-it"
+api_key: null
+base_url: null
+azure_endpoint: null
+azure_api_version: "2024-02-01"
+
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/LLMEntityRecognizer/raw"
+language: "IT"
+#checkpoint_path: "checkpoints/LLMEntityRecognizer/huggingface_entity_recognition_gemma-3-12b-it.jsonl"
+
+prompts_path: "src/entityRecognizer/prompts_IT.json"
+system_prompt_key: "base"
+user_prompt_key: "base"
+system_as_user: false
+
+temperature: 0.2
+max_new_tokens: 2048
+device: null
+raw: false

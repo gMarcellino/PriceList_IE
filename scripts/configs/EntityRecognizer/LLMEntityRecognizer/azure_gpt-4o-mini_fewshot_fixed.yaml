@@ -1,0 +1,25 @@
+provider: "azure"
+model: "gpt-4o-mini"
+api_key: "<YOUR_API_KEY>"
+azure_endpoint: "<YOUR_AZURE_ENDPOINT>"
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/LLMEntityRecognizer/raw"
+language: "IT"
+#checkpoint_path: "checkpoints/LLMEntityRecognizer/azure_gpt-4o-mini-fewshot-fixed.jsonl"
+prompts_path: "src/entityRecognizer/prompts_IT.json"
+system_prompt_key: "base"
+user_prompt_key: "base"
+temperature: 0.2
+max_new_tokens: 2048
+
+few_shot:
+  k: 4
+  strategy: "fixed"
+  examples_path: "data/training.json"
+  text_field: "text"
+  # Set explicit record IDs for a hand-picked fixed set. When null, the
+  # training pool is shuffled once with seed and the first k examples are used.
+  fixed_example_ids: null
+  seed: 42
+  exclude_same_text: true

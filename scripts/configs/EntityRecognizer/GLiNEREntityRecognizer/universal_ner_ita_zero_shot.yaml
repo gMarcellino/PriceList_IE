@@ -1,0 +1,14 @@
+inference_only: true
+
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/GLiNEREntityRecognizer/universal_ner_ita_zero_shot"
+#eval_data_path: "data/test.json"
+
+model_name: "DeepMount00/universal_ner_ita"
+model_path: null
+
+threshold: 0.5
+batch_size: 8
+max_len: 512
+seed: 42

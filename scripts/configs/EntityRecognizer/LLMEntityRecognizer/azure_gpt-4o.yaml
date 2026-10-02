@@ -1,0 +1,14 @@
+provider: "azure"
+model: "gpt-4o"
+api_key: "<YOUR_API_KEY>"
+azure_endpoint: "<YOUR_AZURE_ENDPOINT>"
+inference_data_path: "data/test.json"
+text_field: "text"
+inference_output_path: "predictions/LLMEntityRecognizer/raw"
+language: "IT"
+#checkpoint_path: "checkpoints/LLMEntityRecognizer/azure_gpt-4o.jsonl"
+prompts_path: "src/entityRecognizer/prompts_IT.json"
+system_prompt_key: "base"
+user_prompt_key: "base"
+temperature: 0.2
+max_new_tokens: 2048
